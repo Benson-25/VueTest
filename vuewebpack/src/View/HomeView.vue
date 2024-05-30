@@ -1,9 +1,8 @@
 <template>
-    <h2>Home</h2>
+    <h3>Home</h3>
 </template>
-<style>
-  h2{
+<style scoped lang="scss">
+  h3{
     color:blueviolet;
-    font-size: 28px;
     };
 </style>

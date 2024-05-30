@@ -15,7 +15,17 @@ const routes = [
   {
     path: '/newpage',
     name: '新增頁面',
-    component: () => import('@/View/NewPage.vue')
+    component: () => import('@/View/NewPage.vue'),
+    children: [
+      {
+        path: 'a',
+        component: () => import('@/View/ComponentsA.vue')
+      },
+      {
+        path: 'b',
+        component: () => import('@/View/ComponentsB.vue')
+      }
+    ]
   }
 ]
 const router = createRouter({
