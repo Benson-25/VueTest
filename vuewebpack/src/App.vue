@@ -43,11 +43,21 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    getList () {
+      this.axios.get('/api/:api_path/products').then((response) => {
+        console.log(response.data)
+      })
+      // or
+      this.$http.get('/api/:api_path/products').then((response) => {
+        console.log(response.data)
+      })
+    }
   }
 }
 </script>
